@@ -1,6 +1,7 @@
 #pragma once
 
-#include "titlebar.hpp"
+#include "menu/mainmenu.hpp"
+#include "progress.hpp"
 
 #include <gtkmm/application.h>
 #include <gtkmm/applicationwindow.h>
@@ -15,12 +16,21 @@
 #include <gtkmm/stack.h>
 #include <gtkmm/separator.h>
 
-class MainWindow: public Gtk::ApplicationWindow
+class TitleBar: public Gtk::HeaderBar
 {
 public:
-	MainWindow();
+	TitleBar();
 
 private:
-	TitleBar title_bar;
+	Gtk::ToolButton previous;
+	Gtk::ToolButton play_pause;
+	Gtk::ToolButton next;
 
+	Gtk::Image album;
+	Gtk::Label currently_playing;
+
+	Progress progress;
+
+	Gtk::MenuButton main_menu_button;
+	MainMenu main_menu;
 };
