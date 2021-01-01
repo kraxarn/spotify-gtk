@@ -14,4 +14,4 @@ file(GLOB MAIN_SRC "src/*.[hc]pp")
 add_executable(spotify-gtk ${MAIN_SRC})
 
 # Link libraries
-target_link_libraries(spotify-gtk ${GTKMM_LIBRARIES} ${FMT_LIBRARIES})
+target_link_libraries(spotify-gtk ${GTKMM_LIBRARIES})
