@@ -22,6 +22,7 @@ public:
 	MainMenu();
 
 private:
+	Gtk::Stack stack;
 	Gtk::Box content;
 
 	Gtk::Box playback_options;
@@ -35,10 +36,13 @@ private:
 	Gtk::Separator separator1;
 
 	Gtk::ModelButton devices;
+	DeviceMenu device_menu;
 	Gtk::ModelButton settings;
 
 	Gtk::Separator separator2;
 
 	Gtk::ModelButton log_out;
 	Gtk::ModelButton quit;
+
+	void on_show() override;
 };

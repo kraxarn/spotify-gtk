@@ -2,11 +2,14 @@
 
 MainMenu::MainMenu()
 {
+	stack.set_transition_type(Gtk::STACK_TRANSITION_TYPE_SLIDE_LEFT_RIGHT);
+	add(stack);
+
 	content.set_orientation(Gtk::ORIENTATION_VERTICAL);
 	content.set_spacing(4);
 	content.property_margin().set_value(12);
 	content.property_width_request().set_value(160);
-	add(content);
+	stack.add(content);
 
 	playback_options.set_orientation(Gtk::ORIENTATION_HORIZONTAL);
 	playback_options.set_spacing(12);
@@ -35,6 +38,7 @@ MainMenu::MainMenu()
 	content.add(separator1);
 
 	devices.property_text().set_value("Devices");
+	devices.property_menu_name().set_value("device_menu");
 	content.add(devices);
 
 	settings.property_text().set_value("Settings...");
@@ -50,4 +54,13 @@ MainMenu::MainMenu()
 	content.add(quit);
 
 	content.show_all();
+	stack.add(device_menu, "device_menu");
+	stack.set_visible_child(content);
+	stack.set_visible();
+}
+
+void MainMenu::on_show()
+{
+	stack.set_visible_child(content);
+	Widget::on_show();
 }
