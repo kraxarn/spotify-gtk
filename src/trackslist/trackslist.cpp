@@ -2,16 +2,18 @@
 
 TracksList::TracksList()
 {
+	add(tree);
+
 	model = Gtk::ListStore::create(columns);
-	set_model(model);
+	tree.set_model(model);
 
 	// Header
-	append_column("#", columns.index);
-	append_column("Title", columns.title);
-	append_column("Artist", columns.artist);
-	append_column("Album", columns.album);
-	append_column("Length", columns.length);
-	append_column("Added", columns.added);
+	tree.append_column("#", columns.index);
+	tree.append_column("Title", columns.title);
+	tree.append_column("Artist", columns.artist);
+	tree.append_column("Album", columns.album);
+	tree.append_column("Length", columns.length);
+	tree.append_column("Added", columns.added);
 
 	// Reorder columns
 	for (auto column : get_columns())
@@ -19,7 +21,7 @@ TracksList::TracksList()
 
 	// Example data
 	Gtk::TreeRow row;
-	for (auto i = 0; i < 10; i++)
+	for (auto i = 0; i < 50; i++)
 	{
 		row = *(model->append());
 
