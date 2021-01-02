@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
-project(spotify-gtk)
 
+project(spotify-gtk LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 
 # gtkmm
