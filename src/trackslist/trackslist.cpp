@@ -15,9 +15,10 @@ TracksList::TracksList()
 	tree.append_column("Length", columns.length);
 	tree.append_column("Added", columns.added);
 
-	// Reorder columns
-	for (auto column : get_columns())
-		column->set_reorderable();
+	// Sortable columns
+	auto i = 0;
+	for (auto column : tree.get_columns())
+		column->set_sort_column(i++);
 
 	// Example data
 	Gtk::TreeRow row;
