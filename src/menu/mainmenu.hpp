@@ -21,6 +21,9 @@ class MainMenu: public Gtk::PopoverMenu
 public:
 	MainMenu();
 
+protected:
+	void on_show() override;
+
 private:
 	Gtk::Stack stack;
 	Gtk::Box content;
@@ -43,6 +46,4 @@ private:
 
 	Gtk::ModelButton log_out;
 	Gtk::ModelButton quit;
-
-	void on_show() override;
 };
