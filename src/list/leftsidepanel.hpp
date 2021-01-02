@@ -1,9 +1,22 @@
 #pragma once
 
-#include <gtkmm/listbox.h>
+#include "libraryitem.hpp"
+#include "playlistitem.hpp"
+#include "format.hpp"
 
-class LeftSidePanel: public Gtk::ListBox
+#include <gtkmm/listbox.h>
+#include <gtkmm/separator.h>
+#include <gtkmm/scrolledwindow.h>
+
+class LeftSidePanel: public Gtk::ScrolledWindow
 {
 public:
 	LeftSidePanel();
+
+private:
+	Gtk::ListBox list;
+
+	std::vector<LibraryItem> libraryItems;
+	Gtk::Separator separator;
+	std::vector<PlaylistItem> playlistItems;
 };
