@@ -42,6 +42,7 @@ MainMenu::MainMenu()
 	content.add(devices);
 
 	settings.property_text().set_value("Settings...");
+	settings.signal_clicked().connect(sigc::mem_fun(this, &MainMenu::on_open_settings));
 	content.add(settings);
 
 	separator2.set_orientation(Gtk::ORIENTATION_VERTICAL);
@@ -63,4 +64,9 @@ void MainMenu::on_show()
 {
 	stack.set_visible_child(content);
 	Widget::on_show();
+}
+
+void MainMenu::on_open_settings()
+{
+	about.show_all();
 }

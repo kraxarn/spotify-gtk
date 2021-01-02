@@ -40,10 +40,13 @@ private:
 
 	Gtk::ModelButton devices;
 	DeviceMenu device_menu;
+	AboutDialog about;
 	Gtk::ModelButton settings;
 
 	Gtk::Separator separator2;
 
 	Gtk::ModelButton log_out;
 	Gtk::ModelButton quit;
+
+	void on_open_settings();
 };
