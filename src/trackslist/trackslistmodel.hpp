@@ -11,6 +11,6 @@ public:
 	Gtk::TreeModelColumn<std::string> title;
 	Gtk::TreeModelColumn<std::string> artist;
 	Gtk::TreeModelColumn<std::string> album;
-	Gtk::TreeModelColumn<unsigned int> length;
+	Gtk::TreeModelColumn<std::string> length;
 	Gtk::TreeModelColumn<std::string> added;
 };
