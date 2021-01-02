@@ -31,7 +31,7 @@ TracksList::TracksList()
 	{
 		row = *(model->append());
 
-		row[columns.index] = i;
+		row[columns.index] = i + 1;
 		row[columns.title] = lib::fmt::format("Track {}", (i % 10) + 1);
 		row[columns.artist] = lib::fmt::format("Artist {}", (i / 10) + 1);
 		row[columns.album] = lib::fmt::format("Album {}", (i / 10) + 1);
