@@ -27,7 +27,7 @@ TracksList::TracksList()
 
 	// Example data
 	Gtk::TreeRow row;
-	for (auto i = 0; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		row = *(model->append());
 
