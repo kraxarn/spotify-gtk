@@ -31,6 +31,7 @@ private:
 
 	Progress progress;
 
+	Gtk::ToggleButton search;
 	Gtk::MenuButton main_menu_button;
 	MainMenu main_menu;
 };

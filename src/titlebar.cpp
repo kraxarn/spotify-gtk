@@ -24,4 +24,7 @@ TitleBar::TitleBar()
 	main_menu_button.set_image_from_icon_name("open-menu-symbolic");
 	main_menu_button.set_popover(main_menu);
 	pack_end(main_menu_button);
+
+	search.set_image_from_icon_name("edit-find-symbolic");
+	pack_end(search);
 }
