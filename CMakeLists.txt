@@ -14,5 +14,8 @@ file(GLOB MAIN_SRC "src/*.[hc]pp")
 file(GLOB SUB_SRC "src/*/*.[hc]pp")
 add_executable(spotify-gtk ${MAIN_SRC} ${SUB_SRC})
 
+# Add include directories
+include_directories(src)
+
 # Link libraries
 target_link_libraries(spotify-gtk ${GTKMM_LIBRARIES})

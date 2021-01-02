@@ -1,6 +1,7 @@
 #pragma once
 
-#include "devicemenu.hpp"
+#include "menu/devicemenu.hpp"
+#include "dialog/aboutdialog.hpp"
 
 #include <gtkmm/application.h>
 #include <gtkmm/applicationwindow.h>
