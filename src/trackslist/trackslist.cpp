@@ -18,7 +18,12 @@ TracksList::TracksList()
 	// Sortable columns
 	auto i = 0;
 	for (auto column : tree.get_columns())
+	{
+		column->set_min_width(i > 0 ? 80 : 40);
+		column->set_max_width(260);
+		column->set_resizable();
 		column->set_sort_column(i++);
+	}
 
 	// Example data
 	Gtk::TreeRow row;
