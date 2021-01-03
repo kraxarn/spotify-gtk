@@ -1,7 +1,7 @@
 #pragma once
 
 #include "menu/devicemenu.hpp"
-#include "dialog/aboutdialog.hpp"
+#include "settingsdialog/settingsdialog.hpp"
 
 #include <gtkmm/application.h>
 #include <gtkmm/applicationwindow.h>
@@ -41,7 +41,7 @@ private:
 
 	Gtk::ModelButton devices;
 	DeviceMenu device_menu;
-	AboutDialog about;
+	SettingsDialog settings_dialog;
 	Gtk::ModelButton settings;
 
 	Gtk::Separator separator2;

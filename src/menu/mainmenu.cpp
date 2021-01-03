@@ -68,5 +68,5 @@ void MainMenu::on_show()
 
 void MainMenu::on_open_settings()
 {
-	about.show_all();
+	settings_dialog.show_all();
 }
