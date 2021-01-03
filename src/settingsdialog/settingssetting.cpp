@@ -17,6 +17,8 @@ SettingsSetting::SettingsSetting(const std::string &name, const std::string &des
 	subtitle.set_markup(lib::fmt::format("<sub>{}</sub>", description));
 	title_layout.pack_start(subtitle, false, false);
 
+	widget.set_valign(Gtk::ALIGN_CENTER);
+
 	layout.pack_start(title_layout, true, true);
 	layout.pack_start(widget, false, false);
 
