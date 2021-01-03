@@ -1,8 +1,6 @@
 #pragma once
 
 #include <gtkmm/box.h>
-#include <gtkmm/listboxrow.h>
-#include <gtkmm/label.h>
 
 class SettingsPage: public Gtk::Box
 {
@@ -14,5 +12,6 @@ public:
 	virtual bool save() = 0;
 
 protected:
-	SettingsPage() = default;
+
+	SettingsPage();
 };
