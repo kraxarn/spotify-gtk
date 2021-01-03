@@ -19,4 +19,6 @@ private:
 	Gtk::ListBox list;
 
 	std::vector<std::shared_ptr<SettingsSetting>> settings;
+
+	void on_row_activated(Gtk::ListBoxRow *row);
 };

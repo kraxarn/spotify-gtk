@@ -22,3 +22,12 @@ SettingsSetting::SettingsSetting(const std::string &name, const std::string &des
 
 	add(layout);
 }
+
+void SettingsSetting::toggle()
+{
+	auto toggle = dynamic_cast<Gtk::Switch *>(&widget);
+	if (toggle == nullptr)
+		return;
+
+	toggle->set_active(!toggle->get_active());
+}
