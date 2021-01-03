@@ -1,6 +1,7 @@
 #pragma once
 
 #include "settingssetting.hpp"
+#include "format.hpp"
 
 #include <gtkmm/box.h>
 #include <gtkmm/label.h>
@@ -10,7 +11,7 @@
 class SettingsCategory: public Gtk::Box
 {
 public:
-	explicit SettingsCategory(const std::string &title);
+	explicit SettingsCategory(const std::string &name);
 
 	void add_settings(const std::vector<SettingsSetting *> &setting_list);
 

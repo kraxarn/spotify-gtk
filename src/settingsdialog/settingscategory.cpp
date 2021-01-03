@@ -1,14 +1,14 @@
 #include "settingscategory.hpp"
 
-SettingsCategory::SettingsCategory(const std::string &title)
-	: title(title)
+SettingsCategory::SettingsCategory(const std::string &name)
 {
 	set_orientation(Gtk::ORIENTATION_VERTICAL);
 
-	this->title.set_margin_bottom(8);
-	this->title.set_margin_top(16);
-	this->title.set_alignment(Gtk::ALIGN_START, Gtk::ALIGN_END);
-	pack_start(this->title, false, false);
+	title.set_margin_bottom(8);
+	title.set_margin_top(16);
+	title.set_alignment(Gtk::ALIGN_START, Gtk::ALIGN_END);
+	title.set_markup(lib::fmt::format("<b>{}</b>", name));
+	pack_start(title, false, false);
 	pack_start(list, true, true);
 
 	list.signal_row_activated()
